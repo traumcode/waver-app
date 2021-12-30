@@ -1,0 +1,50 @@
+.icon-register {
+  position: absolute;
+  color: #1e3d37;
+  font-size: 25px;
+
+  margin-left: -109px;
+  margin-top: 7px;
+}
+
+.icon-register-password {
+  position: absolute;
+  color: #1e3d37;
+  font-size: 25px;
+
+  margin-left: -109px;
+  margin-top: 7px;
+}
+
+.icon-register-password-retype {
+  position: absolute;
+  color: #1e3d37;
+  font-size: 25px;
+
+  margin-left: -109px;
+  margin-top: 7px;
+}
+
+.error-text {
+  color: red;
+  position: absolute;
+  margin-top: -68px;
+  background: #191919;
+  border: 1px solid #17cfa0;
+  padding: 11px;
+  transition: 1s;
+  width: 391px;
+  margin-left: -192px;
+}
+
+.eye-password {
+  color: #d7d7d7;
+  position: absolute;
+  bottom: 355px;
+  right: 141px;
+}
+
+.eye-password:hover {
+  color: #17cfa0;
+  cursor: pointer;
+}

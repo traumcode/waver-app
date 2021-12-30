@@ -1,0 +1,76 @@
+.swiper {
+  width: 100%;
+  height: 100%;
+}
+
+.swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  background: #fff;
+
+  /* Center slide text vertically */
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  align-items: center;
+}
+
+.swiper-slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.swiper {
+  width: 95%;
+  height: 456px;
+  margin: 0;
+}
+.append-buttons {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.append-buttons button {
+  display: inline-block;
+  cursor: pointer;
+  border: 1px solid #09cdb8;
+  color: #3dffc6f5;
+  text-decoration: none;
+  padding: 4px 10px;
+  border-radius: 4px;
+  margin: 0 10px;
+  font-size: 13px;
+}
+
+.mySwiper {
+  position: absolute !important;
+  left: 0;
+  right: 0;
+  margin-top: -6px;
+  padding: 40px !important;
+}
+
+.swiper-button-prev {
+  color: #3dffc6f5!important;
+}
+
+.swiper-button-next {
+  color: #3dffc6f5!important;
+}
+
+.swiper-artist-name {
+  position: absolute;
+  background: #081d20;
+  color: #3ef8c1;
+  bottom: 0;
+}

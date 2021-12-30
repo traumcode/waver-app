@@ -1,0 +1,239 @@
+.discover-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+  flex-wrap: wrap;
+}
+
+.discover-card-title {
+  width: 100%;
+  height: 400px;
+  background-image: repeating-linear-gradient(236deg, #212930f5, #212529 4px);
+  border: 1px solid #6bc1c4;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  align-content: center;
+  justify-content: flex-start;
+  align-items: center;
+}
+.discover-content {
+  z-index: 1;
+  padding-top: 83px;
+  margin: 0 10vw 0 10vw;
+  height: 100%;
+  box-shadow: 0 4px 9px 2px #35353566;
+  position: relative;
+  background-color: #abcad145;
+  text-align: center;
+}
+
+.discover-content .wave.svg {
+  width: auto;
+  height : auto;
+  max-height: 100%;
+  max-width: 100%;
+  position: relative;
+}
+
+.discover-genres {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  grid-gap: 5px;
+  gap: 5px;
+  background: #121e20;
+  margin-top: -92px;
+  border: 6px solid #121e20;
+}
+
+.genre-item {
+  position: relative;
+  width: 100%;
+  border: 1px solid #217e63;
+}
+
+.genre-photo {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.genre-overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  transition: 0.9s cubic-bezier(0.18, 0.15, 0, 1.7);
+  background-color: #3cf7c0;
+  cursor: pointer;
+  &:hover {
+    opacity: 0.9;
+  }
+}
+
+.overlay-text {
+  color: black;
+  font-size: 3vw;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+
+.discover-results {
+  padding: 50px;
+}
+
+.card-artist {
+  background-color: transparent;
+}
+
+.styles-box {
+  height: 33.33%;
+  width: 100%;
+  display: inline-block;
+  justify-content: center;
+  align-items: center;
+  flex-flow: row wrap;
+}
+
+.styles-container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.styles-box {
+  background-color: #000b0e;
+  height: 51px;
+  width: 100%;
+  display: inline-block;
+  justify-content: center;
+  align-items: center;
+  flex-flow: row wrap;
+}
+
+.styles-button {
+  line-height: 50px;
+  height: 50px;
+  text-align: center;
+  width: 100%;
+  cursor: pointer;
+}
+
+.styles-button-three {
+  color: #3cf7c0;
+  transition: all 0.5s;
+  position: relative;
+}
+
+.styles-button-three::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  background-color: rgba(255, 255, 255, 0.1);
+  transition: all 0.3s;
+}
+
+.styles-button-three:hover::before {
+  opacity: 0;
+  transform: scale(0.5, 0.5);
+}
+
+.styles-button-three::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  opacity: 0;
+  transition: all 0.3s;
+  border: 1px solid #58ffcf;
+  transform: scale(1.2, 1.2);
+}
+
+.styles-button-three:hover::after {
+  opacity: 1;
+  transform: scale(1, 1);
+}
+
+.title-search-artist {
+  margin: 15px 22vw 0 21.6vw;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  align-items: center;
+  align-content: center;
+}
+
+.title {
+  text-align: center;
+  font-family: Raleway, sans-serif;
+  font-weight: 100;
+  font-size: 40px;
+  display: flex;
+  justify-content: center;
+  flex-flow: row wrap;
+  grid-gap: 10px;
+  gap: 10px;
+  margin-bottom: 0;
+}
+
+.title-two {
+  text-align: center;
+  font-family: Raleway, sans-serif;
+  font-weight: 100;
+  font-size: 40px;
+  display: flex;
+  justify-content: center;
+  flex-flow: row wrap;
+  gap: 10px;
+}
+
+.line-title {
+  margin: 0;
+  color: #16403c;
+  font-weight: 100;
+}
+
+.text-genre {
+  color: #ff3044;
+  margin: 0;
+}
+
+.cancel-genre {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #41a68b;
+  margin: 0;
+  height: 20px;
+  font-weight: 500;
+  width: 20px;
+  border: 1px grey dotted;
+  font-size: 20px;
+  background-color: #ffffff36;
+  &:hover {
+    color: #ff3838;
+  }
+&:active {
+  color: black;
+}
+}
