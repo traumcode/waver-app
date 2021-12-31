@@ -3,7 +3,7 @@ const bcrypt = require('bcrypt')
 const jwt = require('jsonwebtoken')
 const sendMail = require('./sendMail')
 
-const {CLIENT_URL} = process.env
+const { CLIENT_URL } = process.env
 
 const userController = {
 	register: async (req, res) => {
@@ -48,8 +48,29 @@ const userController = {
 
 			res.json({ message: "Register success ! Please verify your email and activate your account" })
 		} catch (error) {
-			return res.status(500)
-				.json({ message: error.message });
+			return res.status(500).json({ message: error.message });
+		}
+	},
+	activateEmail: async (req, res) => {
+		try {
+			const {activation_token} = req.body
+			const user = jwt.verify(activation_token, process.env.ACTIVATION_TOKEN_SECRET)
+
+			const {username, email, password} = user
+
+			const check = await Users.findOne({email})
+			if(check) return res.status(400).json({message:"This email already exists."})
+
+			const newUser = new Users({
+				username, email, password
+			})
+
+			await newUser.save()
+
+			res.json({message: "Account created successfully"})
+
+		} catch (error) {
+			return res.status(500).json({ message: error.message });
 		}
 	}
 }
@@ -60,15 +81,15 @@ function validateEmail (email) {
 }
 
 const createActivationToken = (payload) => {
-	return jwt.sign(payload, process.env.ACTIVATION_TOKEN_SECRET, {expiresIn: '5m'})
+	return jwt.sign(payload, process.env.ACTIVATION_TOKEN_SECRET, { expiresIn: '5m' })
 }
 
 const createAccessToken = (payload) => {
-	return jwt.sign(payload, process.env.ACCESS_TOKEN_SECRET, {expiresIn: '15m'})
+	return jwt.sign(payload, process.env.ACCESS_TOKEN_SECRET, { expiresIn: '15m' })
 }
 
 const createRefreshToken = (payload) => {
-	return jwt.sign(payload, process.env.REFRESH_TOKEN_SECRET, {expiresIn: '7d'})
+	return jwt.sign(payload, process.env.REFRESH_TOKEN_SECRET, { expiresIn: '7d' })
 }
 
 module.exports = userController
