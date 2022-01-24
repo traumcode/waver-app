@@ -1,4 +1,6 @@
+./client/.idea
 /.idea
+./client/src/
 
 # Logs
 logs

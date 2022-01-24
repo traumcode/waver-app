@@ -1,15 +1,15 @@
 const SpotifyWebApi = require('spotify-web-api-node');
 
 const spotifyApi = new SpotifyWebApi({
-	clientId: '3a2a790abc4d4c26a02a7cfe404d86d9',
-	clientSecret: '4f5923cd46a24424a59053ddff2de1fa',
+	clientId: process.env.SPOTIFY_CLIENT_ID,
+	clientSecret: process.env.SPOTIFY_CLIENT_SECRET,
 	redirectUri: 'http://localhost:3000'
 })
 
 export function getRelatedArtist(artistId) {
 	const request = require('request'); // "Request" library
-	const client_id = '3a2a790abc4d4c26a02a7cfe404d86d9'; // Your client id
-	const client_secret = '4f5923cd46a24424a59053ddff2de1fa'; // Your secret
+	const client_id = process.env.SPOTIFY_CLIENT_ID; // Your client id
+	const client_secret = process.env.SPOTIFY_CLIENT_SECRET; // Your secret
 	const authOptions = {
 		url: 'https://accounts.spotify.com/api/token',
 		headers: {
@@ -42,8 +42,8 @@ export function getRelatedArtist(artistId) {
 
 export function getNewestReleases() {
 	const request = require('request'); // "Request" library
-	const client_id = '3a2a790abc4d4c26a02a7cfe404d86d9'; // Your client id
-	const client_secret = '4f5923cd46a24424a59053ddff2de1fa'; // Your secret
+	const client_id = process.env.SPOTIFY_CLIENT_ID; // Your client id
+	const client_secret = process.env.SPOTIFY_CLIENT_SECRET; // Your secret
 	const authOptions = {
 		url: 'https://accounts.spotify.com/api/token',
 		headers: {
@@ -79,8 +79,8 @@ export function getNewestReleases() {
 
 export function getSearchDetails(text) {
 	const request = require('request'); // "Request" library
-	const client_id = '3a2a790abc4d4c26a02a7cfe404d86d9'; // Your client id
-	const client_secret = '4f5923cd46a24424a59053ddff2de1fa'; // Your secret
+	const client_id = process.env.SPOTIFY_CLIENT_ID; // Your client id
+	const client_secret = process.env.SPOTIFY_CLIENT_SECRET; // Your secret
 	const authOptions = {
 		url: 'https://accounts.spotify.com/api/token',
 		headers: {
@@ -112,8 +112,8 @@ export function getSearchDetails(text) {
 
 export function getArtistTopTracks(artistId) {
 	const request = require('request'); // "Request" library
-	const client_id = '3a2a790abc4d4c26a02a7cfe404d86d9'; // Your client id
-	const client_secret = '4f5923cd46a24424a59053ddff2de1fa'; // Your secret
+	const client_id = process.env.SPOTIFY_CLIENT_ID; // Your client id
+	const client_secret = process.env.SPOTIFY_CLIENT_SECRET; // Your secret
 	const authOptions = {
 		url: 'https://accounts.spotify.com/api/token',
 		headers: {
