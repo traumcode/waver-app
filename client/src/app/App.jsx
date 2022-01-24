@@ -11,9 +11,6 @@ import Profile from "../pages/Profile";
 
 function App() {
 	const [ currentPageTitle ] = useState("WAVr~");
-	require('dotenv')
-		.config();
-
 
 	return (
 			<Router>
